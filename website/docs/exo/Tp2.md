@@ -1,20 +1,20 @@
 # Flutter - TP2
 
-Les objectifs de cette première séance de travaux pratiques Flutter
-sont :
+Les objectifs de cette premiï¿½re sï¿½ance de travaux pratiques Flutter
+sontï¿½:
 
--   <span style="color:blue">Découvrir et manipuler la notion les Widgets</span>
+- `<span style="color:blue">Dï¿½couvrir et manipuler la notion les Widgets</span>`
 
--   <span style="color:blue">Manipuler les styles</span>
+- `<span style="color:blue">Manipuler les styles</span>`
 
+##**Exercice 01ï¿½: Scaffold et Appbar**
 
-##**Exercice 01 : Scaffold et Appbar**
+Crï¿½ez un nouveau projet Flutter. Nous allons recrï¿½er l'interface
+graphique frome scratch. Supprimez le contenu la classe **_MyApp_**
+entiï¿½rement
 
-Créez un nouveau projet Flutter. Nous allons recréer l'interface
-graphique frome scratch. Supprimez le contenu la classe ***MyApp***
-entièrement
+- Nous allons crï¿½er notre propre classe MyAppï¿½:
 
--   Nous allons créer notre propre classe MyApp :
 ```dart
  class MyApp extends StatelessWidget {
   		@override
@@ -24,39 +24,39 @@ entièrement
  }
 ```
 
-Nous aurons une erreur à la compilation, il faut la propriété ***home***
+Nous aurons une erreur ï¿½ la compilation, il faut la propriï¿½tï¿½ **_home_**
 dans **MaterialApp**
 
+Pour voir la liste des arguments possible appuyez sur **_ctrl+espace_**
+ï¿½ l'intï¿½rieur des parenthï¿½ses de MaterialApp()
 
+Sï¿½lectionnez l'argument homeï¿½:
 
-Pour voir la liste des arguments possible appuyez sur ***ctrl+espace***
-à l'intérieur des parenthèses de MaterialApp()
+Dï¿½finir **Scaffold()** comme widget pour le homeï¿½:
 
-Sélectionnez l'argument home :
-
-Définir **Scaffold()** comme widget pour le home :
 ```dart
  return MaterialApp(home: Scaffold(),);
 ```
-Il n y'a plus d'erreur, nous avons une application avec un écran blanc.
-Nous avons écrit un **Statelesswidget** qui construit les deux widgets
-les plus importants de Flutter : **MaterialApp** et **Scaffold**
 
-Le **MaterialApp** permet de contrôler l'apparence : couleur, taille de
+Il n y'a plus d'erreur, nous avons une application avec un ï¿½cran blanc.
+Nous avons ï¿½crit un **Statelesswidget** qui construit les deux widgets
+les plus importants de Flutterï¿½: **MaterialApp** et **Scaffold**
+
+Le **MaterialApp** permet de contrï¿½ler l'apparenceï¿½: couleur, taille de
 texte
 
-Le **Scaffold** gère tout ce qui apparait sur l'écran
+Le **Scaffold** gï¿½re tout ce qui apparait sur l'ï¿½cran
 
+Ajoutez ï¿½ la mï¿½thode **_MaterialApp_** le paramï¿½treï¿½:
 
+- \_debugShowCheckedModeBanner:
 
-Ajoutez à la méthode ***MaterialApp*** le paramètre :
+`<span style="color:blue">false</span>`,\_
 
-- *debugShowCheckedModeBanner: <span style="color:blue">false</span>,*
+Sï¿½lectionnez la classe **_MyApp_** et reformatez le code en sï¿½lectionnant aprï¿½s un clic droit de la souris **_ï¿½ï¿½Reformat Code dartfmtï¿½ï¿½_**
 
-Sélectionnez la classe ***MyApp*** et reformatez le code en sélectionnant après un clic droit de la souris ***« Reformat Code dartfmt »***
+Voici le code de votre classe maintenantï¿½:
 
-
-Voici le code de votre classe maintenant :
 ```dart
 class MyApp extends StatelessWidget {
  	@override
@@ -68,11 +68,15 @@ class MyApp extends StatelessWidget {
 	 }
 }
 ```
-On peut changer la couleur du background :
+
+On peut changer la couleur du backgroundï¿½:
+
 ```dart
  home: Scaffold(backgroundColor: Colors.green,),
 ```
--   Rajoutez une AppBar en ajoutant le paramètre appBar à l'objet Scaffold appBar: <span style="color:blue">AppBar()</span>
+
+- Rajoutez une AppBar en ajoutant le paramï¿½tre appBar ï¿½ l'objet Scaffold appBar:
+  `<span style="color:blue">AppBar()</span>`
 
 ```dart
  home: Scaffold(
@@ -83,30 +87,34 @@ On peut changer la couleur du background :
  		),
  )
 ```
-Ajoutez un titre à l'AppBar avec le paramètre **title** et centrez ce titre, et changez la couleur de l'**AppBar**,
+
+Ajoutez un titre ï¿½ l'AppBar avec le paramï¿½tre **title** et centrez ce titre, et changez la couleur de l'**AppBar**,
+
 ```dart
  backgroundColor: Colors.blue,
  title: Text("hello in my app"),
  centerTitle: true,
 ```
 
-Ajoutez une icône à l'AppBar
+Ajoutez une icï¿½ne ï¿½ l'AppBar
+
 ```dart
  actions: [Icon(Icons.account_circle), Icon(Icons.icecream),
  Icon(Icons.access_alarm_sharp),
  Icon(Icons.account_balance_rounded)],
 ```
-Ajoutez un bouton de navigation en bas de la page : ***bottomNavigationBar***
+
+Ajoutez un bouton de navigation en bas de la pageï¿½: **_bottomNavigationBar_**
 
 ```dart
  bottomNavigationBar: BottomNavigationBar(
  items: [BottomNavigationBarItem(icon: Icon(Icons.circle))],
  ),
 ```
+
 Corrigez les erreurs pour avoir un rendu correct
 
-**Solution :**
-
+**Solutionï¿½:**
 
 ```dart
 bottomNavigationBar: BottomNavigationBar(
@@ -119,13 +127,11 @@ bottomNavigationBar: BottomNavigationBar(
 )
 ```
 
+Ajoutez une couleur au **_bottomNavigationBar_**
 
+Nous allons maintenant gï¿½rer l'interaction avec les icones de la barre de navigation en bas de page
 
-Ajoutez une couleur au ***bottomNavigationBar***
-
- Nous allons maintenant gérer l'interaction avec les icones de la barre de navigation en bas de page
-
-Ajoutez le paramètre suivant au ***bottomNavigationBar :***
+Ajoutez le paramï¿½tre suivant au **_bottomNavigationBarï¿½:_**
 
 ```dart
 onTap: (indexpushed) {
@@ -133,60 +139,69 @@ onTap: (indexpushed) {
 		print(indexpushed);
 		},
 ```
-Pour gérer la valeur de l'icône cliquée on utilisera une variable
-entière : index (variable classe)
+
+Pour gï¿½rer la valeur de l'icï¿½ne cliquï¿½e on utilisera une variable
+entiï¿½re : index (variable classe)
+
 ```dart
- int index = 0 ;
+ int index = 0ï¿½;
 ```
-La variable **currentIndex** de l'objet le **bottomNavigationBar** désigne l'icône qui est sélectionnée
+
+La variable **currentIndex** de l'objet le **bottomNavigationBar** dï¿½signe l'icï¿½ne qui est sï¿½lectionnï¿½e
 
 Initialisez cette variable
+
 ```dart
 currentIndex: index,
 ```
-Pour gérer la logique de la barre de navigation il faut mettre à jour le currentIndex à chaque fois qu'une icône est cliquée, dans la fonction **onTap()**
+
+Pour gï¿½rer la logique de la barre de navigation il faut mettre ï¿½ jour le currentIndex ï¿½ chaque fois qu'une icï¿½ne est cliquï¿½e, dans la fonction **onTap()**
+
 ```dart
 index = indexpushed;
 ```
-Pour le que le changement soit dynamique il faut faire appel à la fonction **setState** qui reconstruit l'IHM en fonction des évènements. Mais cette fonction n'est disponible que pour les classes **StatefullWidget**. Il faut alors transformer la classe StatelessWidget **MyApp**.
 
-Sélectionnez le nom de la classe **StatelessWidget** et appuyez sur **Alt + entrée** ensuite **convert to StatefullWidget**
+Pour le que le changement soit dynamique il faut faire appel ï¿½ la fonction **setState** qui reconstruit l'IHM en fonction des ï¿½vï¿½nements. Mais cette fonction n'est disponible que pour les classes **StatefullWidget**. Il faut alors transformer la classe StatelessWidget **MyApp**.
 
-Ajoutez la fonction setState à la fonction **onTap()**
+Sï¿½lectionnez le nom de la classe **StatelessWidget** et appuyez sur **Alt + entrï¿½e** ensuite **convert to StatefullWidget**
+
+Ajoutez la fonction setState ï¿½ la fonction **onTap()**
 
 ```dart
  setState((){
 	 index = indexpushed;
  });
 ```
-On peut également changer les couleurs des icones quand elles sont
-sélectionnées, dans l'objet bottomNavigationBar:
+
+On peut ï¿½galement changer les couleurs des icones quand elles sont
+sï¿½lectionnï¿½es, dans l'objet bottomNavigationBar:
+
 ```dart
 selectedItemColor: Colors.pink,
 unselectedItemColor: Colors.yellow,
 ```
 
-
 Vous pouvez supprimer les **print** dans la fonction **onTap()** maintenant
 
-
-Nous allons maintenant ajouter une image à notre écran  
-Ajouter le paramètre body au **Scaffold**, par exemple  
+Nous allons maintenant ajouter une image ï¿½ notre ï¿½cran  
+Ajouter le paramï¿½tre body au **Scaffold**, par exemple
 
 ```dart
-body: Text('Texte par défaut'), 
+body: Text('Texte par dï¿½faut'),
 ```
 
-Visualisez le résultat  
-Cherchez une image depuis le web, copiez son lien.  Remplacez cette ligne par la commande suivant en y mettant votre lien préféré :-) 
+Visualisez le rï¿½sultat  
+Cherchez une image depuis le web, copiez son lien. Remplacez cette ligne par la commande suivant en y mettant votre lien prï¿½fï¿½rï¿½ :-)
+
 ```dart
 body: Image.network("https://i.insider.com/5de6df0d695b583f4f17f695?width=700 "),
 ```
 
-Nous allons ensuite mettre en place un widget **column** qui permet de placer plusieurs widgets les uns après les autres.
+Nous allons ensuite mettre en place un widget **column** qui permet de placer plusieurs widgets les uns aprï¿½s les autres.
 
-Sélectionnez **Image.network** puis Alt + entrée puis **« wrap with
-column** »
+Sï¿½lectionnez **Image.network** puis Alt + entrï¿½e puis **ï¿½ï¿½wrap with
+column**ï¿½ï¿½
+
 ```dart
  body: Column(
 		 children: [
@@ -194,35 +209,43 @@ column** »
 		 ],
  ),
 ```
-Ajoutez une icône bouton ***IconButton*** après votre image :
+
+Ajoutez une icï¿½ne bouton **_IconButton_** aprï¿½s votre imageï¿½:
+
 ```dart
 IconButton(icon: Icon(Icons.add_box), onPressed: () {print("mon image");}),
 ```
 
-Nous allons maintenant rajouter un compteur qui s'affiche à l'écran et qui s'incrémente à chaque clic sur l'**IconButton**
+Nous allons maintenant rajouter un compteur qui s'affiche ï¿½ l'ï¿½cran et qui s'incrï¿½mente ï¿½ chaque clic sur l'**IconButton**
 
-Ajoutez une variable **number** à votre classe :
+Ajoutez une variable **number** ï¿½ votre classeï¿½:
+
 ```dart
 int number = 0;
 ```
-Il faut maintenant ajouter un champ **Texte** après le **IconButton**
+
+Il faut maintenant ajouter un champ **Texte** aprï¿½s le **IconButton**
+
 ```dart
 Text(number.toString()),
 ```
-Il faut maintenant incrémenter la valeur de **number** dans la
+
+Il faut maintenant incrï¿½menter la valeur de **number** dans la
 fonction **onPressed()** de **IconButton**
+
 ```dart
 number++;
 ```
-Qu'est-ce que vous remarquez ?
 
-**Cela ne marche pas encore !! d’après vous pourquoi ? **
+Qu'est-ce que vous remarquezï¿½?
 
-Question : Ajoutez un bouton qui décrémente la valeur
+**Cela ne marche pas encore !! dï¿½aprï¿½s vous pourquoi ? **
 
-On va maintenant séparer le code en deux fichiers pour plus de lisibilité :
+Questionï¿½: Ajoutez un bouton qui dï¿½crï¿½mente la valeur
 
-Créez un nouveau fichier **home_page.dart** (en minuscule)
+On va maintenant sï¿½parer le code en deux fichiers pour plus de lisibilitï¿½ :
+
+Crï¿½ez un nouveau fichier **home_page.dart** (en minuscule)
 
 Ajoutez le premier import
 
@@ -231,17 +254,19 @@ import 'package:flutter/material.dart';
 ```
 
 Ajoutez une classe :
-```dart 
-StatefullWidget : HomePage
+
+```dart
+StatefullWidgetï¿½: HomePage
 ```
 
-Pour générer automatiquement une classe StatefullWidget vous pouvez créer une classe StatelessWidget et ensuite la transformer en **Statefullwidget**, comme fait précédemment.
+Pour gï¿½nï¿½rer automatiquement une classe StatefullWidget vous pouvez crï¿½er une classe StatelessWidget et ensuite la transformer en **Statefullwidget**, comme fait prï¿½cï¿½demment.
+
 ```dart
  class HomePage extends StatefulWidget {
  		@override
  _		HomePageState createState() => _HomePageState();
  }
- 
+
  class _HomePageState extends State<HomePage> {
  		@override
  		Widget build(BuildContext context) {
@@ -249,17 +274,20 @@ Pour générer automatiquement une classe StatefullWidget vous pouvez créer une cl
  		}
  }
 ```
-Cette classe va renvoyer le : **Scaffold()**
+
+Cette classe va renvoyer leï¿½: **Scaffold()**
 
 Copiez et retirez le contenu de l'objet **Scaffold(..)** depuis le fichier
-**main.dart** et l'insérer dans le **Scaffold(..)** de la classe **_HomePageState()** que vous créerez dans **MaterialApp()**.
+**main.dart** et l'insï¿½rer dans le **Scaffold(..)** de la classe **\_HomePageState()** que vous crï¿½erez dans **MaterialApp()**.
 
-Copiez aussi les deux variables : (déclarations à placer avant le @override de la classe _HomePageState)
+Copiez aussi les deux variablesï¿½: (dï¿½clarations ï¿½ placer avant le @override de la classe \_HomePageState)
+
 ```dart
  int index = 0;
  int number = 0;
 ```
-On se déplace maintenant dans le fichier **main.dart**
+
+On se dï¿½place maintenant dans le fichier **main.dart**
 
 Il faut importer le fichier **home_page.dart**
 
@@ -267,28 +295,34 @@ Il faut importer le fichier **home_page.dart**
 import 'home_page.dart';
 ```
 
-Ajoutez à la propriété **home** : la fonction **HomePage()** qui va appeler la classe qui va construire l'IHM
+Ajoutez ï¿½ la propriï¿½tï¿½ **home**ï¿½: la fonction **HomePage()** qui va appeler la classe qui va construire l'IHM
+
 ```dart
 home : HomePage()
 ```
-Exécutez, vous aurez le même rendu que l'exercice précédent mais avec plus de lisibilité dans le code.
 
-**Exercice 2 : Navigation entre les pages**
+Exï¿½cutez, vous aurez le mï¿½me rendu que l'exercice prï¿½cï¿½dent mais avec plus de lisibilitï¿½ dans le code.
 
-Nous allons maintenant implémenter la logique de navigation entre les pages avec un bouton pour naviguer entre deux pages.
+**Exercice 2ï¿½: Navigation entre les pages**
+
+Nous allons maintenant implï¿½menter la logique de navigation entre les pages avec un bouton pour naviguer entre deux pages.
 
 Ajoutez un bouton pour la navigation juste en dessous de la valeur du
-compteur :
+compteurï¿½:
+
 ```dart
 IconButton(icon: Icon(Icons.arrow_right), onPressed: (){})
 ```
-Créez un nouveau fichier pour la nouvelle page. Pour cela créez un nouveau fichier second_page.dart
+
+Crï¿½ez un nouveau fichier pour la nouvelle page. Pour cela crï¿½ez un nouveau fichier second_page.dart
 
 Ajoutez l'import de Material App
+
 ```dart
 import 'package:flutter/material.dart';
 ```
-Ajoutez la classes ***SecondPage*** comme étant un StatelessWidget :
+
+Ajoutez la classes **_SecondPage_** comme ï¿½tant un StatelessWidgetï¿½:
 
 ```dart
  class SecondPage extends StatelessWidget {
@@ -298,31 +332,40 @@ Ajoutez la classes ***SecondPage*** comme étant un StatelessWidget :
 		}
  }
 ```
-Ajoutez une AppBar à votre Scaffold
 
-Maintenant il faut définir un nom (route) pour cette page. Ajoutez à la classe ***SecondPage*** (avant le @override) le nom de la route qui permettra de pointer vers cette nouvelle page :
+Ajoutez une AppBar ï¿½ votre Scaffold
+
+Maintenant il faut dï¿½finir un nom (route) pour cette page. Ajoutez ï¿½ la classe **_SecondPage_** (avant le @override) le nom de la route qui permettra de pointer vers cette nouvelle pageï¿½:
+
 ```dart
 static const tag = "second_page";
 ```
+
 Revenant maintenant au fichier main.dart. Ajoutez un import du fichier **second_page.dart**
 
 ```dart
 import 'second_page.dart';
 ```
-Nous allons ajouter des routes dans le composant ***MaterialApp()***
 
-Ajoutez l'instruction suivante après l'instruction : **debugShowCheckedModeBanner**
+Nous allons ajouter des routes dans le composant **_MaterialApp()_**
+
+Ajoutez l'instruction suivanteï¿½aprï¿½s l'instruction : **debugShowCheckedModeBanner**
+
 ```dart
 routes : {SecondPage.tag : (context) => SecondPage() }
 ```
-Maintenant il faut appeler cette route. Revenez au fichier **home_page.dart** :
+
+Maintenant il faut appeler cette route. Revenez au fichier **home_page.dart**ï¿½:
 
 Ajoutez un import du fichier second_page.dart
+
 ```dart
 import 'second_page.dart';
 ```
-Mettez à jour le ***IconButton*** pour mettre en œuvre la logique de
-navigation :
+
+Mettez ï¿½ jour le **_IconButton_** pour mettre en ï¿½uvre la logique de
+navigationï¿½:
+
 ```dart
  IconButton(
 	 icon: Icon(Icons.arrow_right),
@@ -331,32 +374,28 @@ navigation :
  })
 ```
 
+**Exercice 3ï¿½:** Bombe
 
+Rï¿½alisez l'exercice simulant une bombe en partant du projet ï¿½ï¿½Flutter
+Applicationï¿½ï¿½ de base
 
-**Exercice 3 :** Bombe
+**Exercice 4ï¿½:** Une deuxiï¿½me Interface (**avec le body**)
 
-Réalisez l'exercice simulant une bombe en partant du projet « Flutter
-Application » de base
+- Crï¿½ez une nouvelle application Flutter intitulï¿½e ï¿½ï¿½**MyApp**ï¿½ï¿½. Reportez-vous ï¿½ la notice d'installation si vous ne savez pas comment crï¿½er un projet Flutter.
 
+- Le projet contient un rï¿½pertoireï¿½ï¿½ï¿½**Lib**ï¿½ï¿½ contenant ï¿½ ce stade juste
+  un fichier ï¿½ï¿½**main.dart**ï¿½ï¿½.
 
+- Double cliquez sur le fichier ï¿½ï¿½**main.dart**ï¿½ï¿½ pour l'ï¿½diter.
 
-**Exercice 4 :** Une deuxième Interface (**avec le body**)
-
--   Créez une nouvelle application Flutter intitulée « **MyApp** ». Reportez-vous à la notice d'installation si vous ne savez pas comment créer un projet Flutter.
-
--   Le projet contient un répertoire « **Lib** » contenant à ce stade juste
-    un fichier « **main.dart** ».
-
--   Double cliquez sur le fichier « **main.dart** » pour l'éditer.
-
--   Remplacez le code du fichier celui de l'encadré ci-dessous.
+- Remplacez le code du fichier celui de l'encadrï¿½ ci-dessous.
 
 ```dart
 import 'package:flutter/material.dart';
 void main() {
 runApp(MyApp());
 }
-// Expression équivalente
+// Expression ï¿½quivalente
 // void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
 	@override
@@ -365,267 +404,267 @@ class MyApp extends StatelessWidget {
 	}
 }
 ```
--   Exécutez le code en sélectionnant un émulateur ou un smartphone et en cliquant ensuite sur le triangle vert
 
--   Observez le résultat.
+- Exï¿½cutez le code en sï¿½lectionnant un ï¿½mulateur ou un smartphone et en cliquant ensuite sur le triangle vert
 
-Nous allons maintenant remplacer le texte « Hello World » par un Widget
-**Scaffold** qui gère l'espace de la fenêtre dans lequel nous allons
-définir un Widget **AppBar** qui contiendra le titre de l'application
+- Observez le rï¿½sultat.
+
+Nous allons maintenant remplacer le texte ï¿½ï¿½Hello Worldï¿½ï¿½ par un Widget
+**Scaffold** qui gï¿½re l'espace de la fenï¿½tre dans lequel nous allons
+dï¿½finir un Widget **AppBar** qui contiendra le titre de l'application
 (Widget **Text**) et un Widget Body qui contiendra un Widget **Text**
-qui contiendra le texte par défaut.
+qui contiendra le texte par dï¿½faut.
 
-Adaptez le code comme suit :
+Adaptez le code comme suitï¿½:
+
 ```dart
-import 'package:flutter/material.dart'; 
- 
-void main() => runApp(MyApp()); 
- 
-class MyApp extends StatelessWidget { 
-  @override 
-  Widget build(BuildContext context) { 
-    return MaterialApp( 
-      home: Scaffold( 
-        appBar: AppBar(    
-          title: Text('Mon App Flutter'), 
-        ), // AppBar 
-        body: Text('Texte par défaut'), 
-      ), // Scaffold   
-    ) ; // MaterialApp 
-  } 
-} 
-```
--   Exécutez le code et observez les changements.
+import 'package:flutter/material.dart';
 
-Nous allons maintenant améliorer le Body de l'application pour y
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Mon App Flutter'),
+        ), // AppBar
+        body: Text('Texte par dï¿½faut'),
+      ), // Scaffold
+    ) ; // MaterialApp
+  }
+}
+```
+
+- Exï¿½cutez le code et observez les changements.
+
+Nous allons maintenant amï¿½liorer le Body de l'application pour y
 disposer d'autres objets tels que des boutons (Widget RaisedButton).
-Nous allons également remplacer le Widget **Text** du body par un Widget invisible de type **Column** qui définit une colonne dans le body qui peut accueillir plusieurs Widgets enfants (children). Chaque bouton à
-une propriété child qui fait référence à un widget Text qui permet d'écrire sur le bouton et un évènement de type onPressed qui pour le moment ne fait référence à rien (null).
+Nous allons ï¿½galement remplacer le Widget **Text** du body par un Widget invisible de type **Column** qui dï¿½finit une colonne dans le body qui peut accueillir plusieurs Widgets enfants (children). Chaque bouton ï¿½
+une propriï¿½tï¿½ child qui fait rï¿½fï¿½rence ï¿½ un widget Text qui permet d'ï¿½crire sur le bouton et un ï¿½vï¿½nement de type onPressed qui pour le moment ne fait rï¿½fï¿½rence ï¿½ rien (null).
 
-Adaptez le code précédent comme suit :
+Adaptez le code prï¿½cï¿½dent comme suitï¿½:
+
 ```dart
-import 'package:flutter/material.dart'; 
- 
-void main() => runApp(MyApp()); 
- 
-class MyApp extends StatelessWidget { 
-  @override 
-  Widget build(BuildContext context) { 
-    return MaterialApp( 
-      home: Scaffold( 
-        appBar: AppBar(    
-          title: Text('Mon App Flutter'), 
-        ), // AppBar 
-        body: Column( 
-          children: [ 
-            Text('La question '), 
-            ElevatedButton(   
-              child: Text('Réponse 1'), 
- onPressed: () {}, 
-            ), // RaisedButton 
-            ElevatedButton ( 
-              child: Text('Réponse 2'), 
- onPressed: () {}, 
-            ), // RaisedButton 
-            ElevatedButton ( 
- child: Text('Réponse 3'),  
-              onPressed: () {}, 
- 
-         ), // ElevatedButton 
-          ], 
-        ), // Column 
-      ), // Scaffold 
-    ); // MaterialApp 
-  } 
-} 
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Mon App Flutter'),
+        ), // AppBar
+        body: Column(
+          children: [
+            Text('La question '),
+            ElevatedButton(
+              child: Text('Rï¿½ponse 1'),
+ onPressed: () {},
+            ), // RaisedButton
+            ElevatedButton (
+              child: Text('Rï¿½ponse 2'),
+ onPressed: () {},
+            ), // RaisedButton
+            ElevatedButton (
+ child: Text('Rï¿½ponse 3'),
+              onPressed: () {},
+
+         ), // ElevatedButton
+          ],
+        ), // Column
+      ), // Scaffold
+    ); // MaterialApp
+  }
+}
 ```
--   Exécutez le code et observez les modifications sur l'interface.
+
+- Exï¿½cutez le code et observez les modifications sur l'interface.
 
 Il n'y a pour le moment aucune interaction lorsque l'on clique sur les
-boutons. Nous allons maintenant vous montrer les trois manières
-d'exécuter un code lors du déclenchement d'un évènement **onPressed **:
+boutons. Nous allons maintenant vous montrer les trois maniï¿½res
+d'exï¿½cuter un code lors du dï¿½clenchement d'un ï¿½vï¿½nement **onPressedï¿½**:
 
--   La **<span style="color:orange">première méthode</span>** consiste à faire appel à une fonction de type void.
+- La **`<span style="color:orange">premiï¿½re mï¿½thode</span>`** consiste ï¿½ faire appel ï¿½ une fonction de type void.
 
--   La **<span style="color:green"> deuxième méthode</span>** utilise une fonction anonyme.
+- La **`<span style="color:green"> deuxiï¿½me mï¿½thode</span>`** utilise une fonction anonyme.
 
--   La **<span style="color:blue"> troisième approche</span>** intègre directement un bloc de code.
+- La **`<span style="color:blue"> troisiï¿½me approche</span>`** intï¿½gre directement un bloc de code.
 
-
-
--   Méthode 1 : adaptez le code comme suit :
-
-
-
+- Mï¿½thode 1ï¿½: adaptez le code comme suitï¿½:
 
 ```dart
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp()); 
-class MyApp extends StatelessWidget { 
- 
-  void answerQuestion() { 
-    print('Réponse 1 choisie!'); 
-  } 
-   
-  @override 
-  Widget build(BuildContext context) { 
-    return MaterialApp( 
-   home: Scaffold( 
-     appBar: AppBar( 
-    title: Text('Mon App Flutter'), 
-  ), // AppBar 
-  body: Column( 
-    children: [ 
-      Text('La question '), 
-   ElevatedButton ( 
-     child: Text('Réponse 1'), 
-     onPressed: answerQuestion, 
-   ), // ElevatedButton 
-   ElevatedButton ( 
-     child: Text('Réponse 2'), 
-     onPressed: () => print('Réponse 2 choisie!'), 
-   ), // ElevatedButton 
-   ElevatedButton ( 
-     child: Text('Réponse 3'),  
-     onPressed: () { 
-       print('Réponse 3 choisie!'); 
-     }, 
-   ), // ElevatedButton 
-    ], 
-  ), // Column 
-   ), // Scaffold 
- ); 
-  } 
-} 
-```
-Nous allons maintenant créer nos propres Widget personnalisés qui contiendront les questions (fichier **question.dart**) et les réponses (**answer.dart**) et transformer notre application de **StatelessWidget** en **StatefulWidget**.
+void main() => runApp(MyApp());
+class MyApp extends StatelessWidget {
 
--   Créez un nouveau fichier « question.dart »
-
-Dans ce fichier encodez le code suivant :
-
-
-```dart
-import 'package:flutter/material.dart'; 
- 
-class Question extends StatelessWidget { 
-  final String questionText; 
- 
-  Question(this.questionText); 
- 
-  @override 
-  Widget build(BuildContext context) { 
-    return Container( 
-      width: double.infinity,            // On prend toute la largeur de l’écran 
-      margin: EdgeInsets.all(10),   // On définit des marges de 10 pixel ; 
-      child: Text(                            // On ajoute un Widget enfant de type Text 
-        questionText,        // On affiche le contenu de la variable questionText 
-        style: TextStyle(fontSize: 28),    // On applique une police de taille 28 
-        textAlign: TextAlign.center,      // On centre le texte 
-      ), 
-    ); 
-  } 
-} 
-```
- 
-- Créez un nouveau fichier « answer.dart » 
-
-Dans ce fichier encodez le code suivant : 
-
-```dart
-import 'package:flutter/material.dart'; 
-class Answer extends StatelessWidget { 
-  final VoidCallback selectHandler; // Remplacez Function par VoidCallback pour un meilleur typage 
-  final String answerText; 
-  Answer(this.selectHandler, this.answerText); 
- 
-  @override 
-  Widget build(BuildContext context) { 
-    return Container( 
-      width: double.infinity, 
-      child: ElevatedButton( 
-        style: ElevatedButton.styleFrom( 
-          backgroundColor : Colors.blue, // Définissez la couleur de fond 
-          foregroundColor: Colors.white, // Définissez la couleur du texte 
-        ), 
-        child: Text(answerText), 
-        onPressed: selectHandler, 
-      ), 
-    ); 
-  } 
+  void answerQuestion() {
+    print('Rï¿½ponse 1 choisie!');
   }
-  ```
-  Adaptez les code de main.dart comme suit : 
-  
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+   home: Scaffold(
+     appBar: AppBar(
+    title: Text('Mon App Flutter'),
+  ), // AppBar
+  body: Column(
+    children: [
+      Text('La question '),
+   ElevatedButton (
+     child: Text('Rï¿½ponse 1'),
+     onPressed: answerQuestion,
+   ), // ElevatedButton
+   ElevatedButton (
+     child: Text('Rï¿½ponse 2'),
+     onPressed: () => print('Rï¿½ponse 2 choisie!'),
+   ), // ElevatedButton
+   ElevatedButton (
+     child: Text('Rï¿½ponse 3'),
+     onPressed: () {
+       print('Rï¿½ponse 3 choisie!');
+     },
+   ), // ElevatedButton
+    ],
+  ), // Column
+   ), // Scaffold
+ );
+  }
+}
+```
+
+Nous allons maintenant crï¿½er nos propres Widget personnalisï¿½s qui contiendront les questions (fichier **question.dart**) et les rï¿½ponses (**answer.dart**) et transformer notre application de **StatelessWidget** en **StatefulWidget**.
+
+- Crï¿½ez un nouveau fichier ï¿½ï¿½question.dartï¿½ï¿½
+
+Dans ce fichier encodez le code suivantï¿½:
+
 ```dart
-import 'package:flutter/material.dart'; 
-import './question.dart'; 
-import './answer.dart'; 
- 
-void main() => runApp(MyApp()); 
- 
-class MyApp extends StatefulWidget { 
-  @override 
-  State<StatefulWidget> createState() { 
-    return _MyAppState(); 
-  } 
-} 
- 
-class _MyAppState extends State<MyApp> { 
-  final List<Map<String, Object>> questions = const [ // Assurez-vous que le type de answers est Object pour 
-pouvoir être List<String> 
-    { 
-      'questionText': 'What\'s your favorite color?', 
-      'answers': ['Black', 'Red', 'Green', 'White'], 
-    }, 
-    { 
-      'questionText': 'What\'s your favorite animal?', 
-      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion'], 
-    }, 
-    { 
-      'questionText': 'Who\'s your favorite instructor?', 
-      'answers': ['Max', 'Max', 'Max', 'Max'], 
-    }, 
-  ]; 
-  var _questionIndex = 0; 
- 
-  void _answerQuestion() { 
-    if (_questionIndex < questions.length) { 
-      setState(() { 
-        _questionIndex = _questionIndex + 1; 
-      }); 
-      print('We have more questions!'); 
-    } else { 
-      print('No more questions!'); 
-    } 
-  } 
- 
-  @override 
-  Widget build(BuildContext context) { 
-    return MaterialApp( 
-      home: Scaffold( 
-        appBar: AppBar( 
+import 'package:flutter/material.dart';
+
+class Question extends StatelessWidget {
+  final String questionText;
+
+  Question(this.questionText);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,            // On prend toute la largeur de lï¿½ï¿½cran
+      margin: EdgeInsets.all(10),   // On dï¿½finit des marges de 10 pixel ;
+      child: Text(                            // On ajoute un Widget enfant de type Text
+        questionText,        // On affiche le contenu de la variable questionText
+        style: TextStyle(fontSize: 28),    // On applique une police de taille 28
+        textAlign: TextAlign.center,      // On centre le texte
+      ),
+    );
+  }
+}
+```
+
+- Crï¿½ez un nouveau fichier ï¿½ answer.dart ï¿½
+
+Dans ce fichier encodez le code suivant :
+
+```dart
+import 'package:flutter/material.dart';
+class Answer extends StatelessWidget {
+  final VoidCallback selectHandler; // Remplacez Function par VoidCallback pour un meilleur typage
+  final String answerText;
+  Answer(this.selectHandler, this.answerText);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor : Colors.blue, // Dï¿½finissez la couleur de fond
+          foregroundColor: Colors.white, // Dï¿½finissez la couleur du texte
+        ),
+        child: Text(answerText),
+        onPressed: selectHandler,
+      ),
+    );
+  }
+  }
+```
+
+Adaptez les code de main.dart comme suit :
+
+```dart
+import 'package:flutter/material.dart';
+import './question.dart';
+import './answer.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
+  final List<Map<String, Object>> questions = const [ // Assurez-vous que le type de answers est Object pour
+pouvoir ï¿½tre List<String>
+    {
+      'questionText': 'What\'s your favorite color?',
+      'answers': ['Black', 'Red', 'Green', 'White'],
+    },
+    {
+      'questionText': 'What\'s your favorite animal?',
+      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion'],
+    },
+    {
+      'questionText': 'Who\'s your favorite instructor?',
+      'answers': ['Max', 'Max', 'Max', 'Max'],
+    },
+  ];
+  var _questionIndex = 0;
+
+  void _answerQuestion() {
+    if (_questionIndex < questions.length) {
+      setState(() {
+        _questionIndex = _questionIndex + 1;
+      });
+      print('We have more questions!');
+    } else {
+      print('No more questions!');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
           title: Text('My First App'),
-       ), 
-        body: _questionIndex < questions.length 
-            ? Column( 
-          children: [ 
-            Question( 
-              questions[_questionIndex]['questionText'] as String, // Cast vers String pour s'assurer du type 
-            ), 
-            ...(questions[_questionIndex]['answers'] as List<String>) // Cast vers List<String> pour s'assurer du type 
-                .map((answer) { 
-              return Answer(_answerQuestion, answer); 
-            }).toList() 
-          ], 
-        ) 
-            : Center( 
-          child: Text('You did it!'), 
-        ), 
-      ), 
-    ); 
-  } 
-} 
- ```
-  
+       ),
+        body: _questionIndex < questions.length
+            ? Column(
+          children: [
+            Question(
+              questions[_questionIndex]['questionText'] as String, // Cast vers String pour s'assurer du type
+            ),
+            ...(questions[_questionIndex]['answers'] as List<String>) // Cast vers List<String> pour s'assurer du type
+                .map((answer) {
+              return Answer(_answerQuestion, answer);
+            }).toList()
+          ],
+        )
+            : Center(
+          child: Text('You did it!'),
+        ),
+      ),
+    );
+  }
+}
+```
