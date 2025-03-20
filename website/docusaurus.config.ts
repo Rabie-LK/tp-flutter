@@ -5,12 +5,12 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'TP Flutter',
+  tagline: 'tp flutter',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://rabie-lk.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/tp-flutter/',
@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Rabie-LK/tp-flutter',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -50,12 +50,10 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'TP Flutter',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Polytechnique Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -66,7 +64,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/Rabie-LK/tp-flutter',
           label: 'GitHub',
           position: 'right',
         },
@@ -80,24 +78,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              to: '/docs/Installation',
             },
           ],
         },
@@ -106,7 +87,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Rabie-LK/tp-flutter',
             },
           ],
         },
